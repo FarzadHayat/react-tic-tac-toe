@@ -9,10 +9,12 @@ function App() {
       </header>
       <Game />
       <footer>
-        Developed by{" "}
-        <a href="https://github.com/FarzadHayat" alt="FarzadHayat on GitHub">
-          FarzadHayat
-        </a>
+        <p>
+          Developed by{" "}
+          <a href="https://github.com/FarzadHayat" alt="FarzadHayat on GitHub">
+            FarzadHayat
+          </a>
+        </p>
       </footer>
     </div>
   );
