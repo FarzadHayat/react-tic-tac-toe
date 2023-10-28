@@ -1,7 +1,8 @@
 .square {
   width: 4rem;
   height: 4rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
   border-width: 0.4rem;
   background: #ffc6c7;
   margin: 0.3rem;
@@ -12,5 +13,9 @@
 }
 
 .winner {
+  background: #c3f0ca;
+}
+
+.winner:active {
   background: #c3f0ca;
 }

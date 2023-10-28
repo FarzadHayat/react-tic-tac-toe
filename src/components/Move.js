@@ -10,7 +10,7 @@ export default function Move({ move, isButton }) {
     description = `Go to game start`;
   }
   return (
-    <li key={move}>
+    <li>
       {isButton ? (
         <button className="move">{description}</button>
       ) : (
