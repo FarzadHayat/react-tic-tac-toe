@@ -1,0 +1,16 @@
+.square {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  border-width: 0.4rem;
+  background: #ffc6c7;
+  margin: 0.3rem;
+}
+
+.square:active {
+  background: #ff8ba7;
+}
+
+.winner {
+  background: #c3f0ca;
+}

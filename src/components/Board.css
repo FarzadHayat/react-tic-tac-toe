@@ -1,0 +1,10 @@
+.board-panel {
+  padding: 1rem;
+}
+
+.board {
+}
+
+.board-row {
+  display: flex;
+}

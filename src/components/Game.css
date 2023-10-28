@@ -1,0 +1,10 @@
+.game {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .game {
+    flex-direction: column;
+  }
+}
