@@ -1,12 +1,15 @@
 .game {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  place-items: center;
+  align-items: start;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
   gap: 2rem;
 }
 
 @media (max-width: 600px) {
   .game {
-    flex-direction: column;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
   }
 }
