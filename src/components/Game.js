@@ -19,12 +19,20 @@ export default function Game() {
 
   return (
     <div className="game">
-      <Board
-        squares={history[currentIndex][0]}
-        currentMove={currentIndex % 2 === 0 ? "X" : "O"}
-        onPlay={handlePlay}
-      />
-      <History history={history} jumpTo={jumpTo} currentIndex={currentIndex} />
+      <div>
+        <Board
+          squares={history[currentIndex][0]}
+          currentMove={currentIndex % 2 === 0 ? "X" : "O"}
+          onPlay={handlePlay}
+        />
+      </div>
+      <div>
+        <History
+          history={history}
+          jumpTo={jumpTo}
+          currentIndex={currentIndex}
+        />
+      </div>
     </div>
   );
 }

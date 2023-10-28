@@ -1,8 +1,6 @@
-.board-panel {
-  padding: 1rem;
-}
-
 .board {
+  display: flex;
+  flex-direction: column;
 }
 
 .board-row {

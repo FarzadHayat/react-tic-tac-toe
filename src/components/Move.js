@@ -18,7 +18,9 @@ export default function Move({ index, isButton, onClick, pos }) {
       description = `You are at the start`;
     }
   } else if (index > 0) {
-    description = `Go to move (${row}, ${col})`;
+    description = `Go to move (${row}, ${col}) by ${
+      index % 2 === 0 ? "O" : "X"
+    }`;
   } else {
     description = `Go to game start`;
   }

@@ -1,6 +1,8 @@
 import Move from "./Move";
 import "./History.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown19, faArrowUp91 } from "@fortawesome/free-solid-svg-icons";
 
 export default function History({ history, jumpTo, currentIndex }) {
   const [isReversed, setIsReversed] = useState(false);
@@ -28,7 +30,7 @@ export default function History({ history, jumpTo, currentIndex }) {
           className="reverse-button"
           onClick={() => setIsReversed(!isReversed)}
         >
-          Reverse
+          <FontAwesomeIcon icon={isReversed ? faArrowUp91 : faArrowDown19} />
         </button>
       </div>
       <ol className="history" reversed={isReversed}>
