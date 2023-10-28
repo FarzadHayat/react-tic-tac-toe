@@ -1,6 +1,6 @@
 .game {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 @media (max-width: 600px) {

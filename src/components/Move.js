@@ -10,12 +10,15 @@ export default function Move({ index, isButton, onClick, pos }) {
 
   let description;
   if (!isButton) {
-    description = `You are at move ${index}`;
     if (index > 0) {
-      description += ` (${row}, ${col})`;
+      description = `The last move was (${row}, ${col}) by ${
+        index % 2 === 0 ? "O" : "X"
+      }`;
+    } else {
+      description = `You are at the start`;
     }
   } else if (index > 0) {
-    description = `Go to move ${index} (${row}, ${col})`;
+    description = `Go to move (${row}, ${col})`;
   } else {
     description = `Go to game start`;
   }

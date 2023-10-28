@@ -24,7 +24,7 @@ export default function Game() {
         currentMove={currentIndex % 2 === 0 ? "X" : "O"}
         onPlay={handlePlay}
       />
-      <History history={history} jumpTo={jumpTo} />
+      <History history={history} jumpTo={jumpTo} currentIndex={currentIndex} />
     </div>
   );
 }

@@ -23,62 +23,38 @@ export default function Board({ squares, onPlay, currentMove }) {
     }
   }
 
+  function buildBoard() {
+    const boardContent = [];
+
+    for (let i = 0; i < 3; i++) {
+      const rowContent = [];
+
+      for (let j = 0; j < 3; j++) {
+        const idx = 3 * i + j;
+
+        rowContent.push(
+          <Square
+            key={idx}
+            value={squares[idx]}
+            onClick={() => handleClick(idx)}
+            isWinner={winningSquares && winningSquares.includes(idx)}
+          />
+        );
+      }
+
+      boardContent.push(
+        <div className="board-row" key={i}>
+          {rowContent}
+        </div>
+      );
+    }
+    return boardContent;
+  }
+
   return (
     <div className="board-panel">
       <h2>{getStatus()}</h2>
-      <div className="board">
-        <div className="board-row">
-          <Square
-            value={squares[0]}
-            onClick={() => handleClick(0)}
-            isWinner={winningSquares && winningSquares.includes(0)}
-          />
-          <Square
-            value={squares[1]}
-            onClick={() => handleClick(1)}
-            isWinner={winningSquares && winningSquares.includes(1)}
-          />
-          <Square
-            value={squares[2]}
-            onClick={() => handleClick(2)}
-            isWinner={winningSquares && winningSquares.includes(2)}
-          />
-        </div>
-        <div className="board-row">
-          <Square
-            value={squares[3]}
-            onClick={() => handleClick(3)}
-            isWinner={winningSquares && winningSquares.includes(3)}
-          />
-          <Square
-            value={squares[4]}
-            onClick={() => handleClick(4)}
-            isWinner={winningSquares && winningSquares.includes(4)}
-          />
-          <Square
-            value={squares[5]}
-            onClick={() => handleClick(5)}
-            isWinner={winningSquares && winningSquares.includes(5)}
-          />
-        </div>
-        <div className="board-row">
-          <Square
-            value={squares[6]}
-            onClick={() => handleClick(6)}
-            isWinner={winningSquares && winningSquares.includes(6)}
-          />
-          <Square
-            value={squares[7]}
-            onClick={() => handleClick(7)}
-            isWinner={winningSquares && winningSquares.includes(7)}
-          />
-          <Square
-            value={squares[8]}
-            onClick={() => handleClick(8)}
-            isWinner={winningSquares && winningSquares.includes(8)}
-          />
-        </div>
-      </div>
+      <div className="board">{buildBoard()}</div>
     </div>
   );
 }
