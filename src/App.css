@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
 }
@@ -27,6 +27,10 @@ button:active {
   color: #33272a;
 }
 
+header {
+  padding-top: 2rem;
+}
+
 footer {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

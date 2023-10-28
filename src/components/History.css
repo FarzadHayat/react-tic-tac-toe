@@ -1,6 +1,7 @@
 .history-panel {
   padding: 1rem;
 }
+
 .history {
   display: flex;
   flex-direction: column;
